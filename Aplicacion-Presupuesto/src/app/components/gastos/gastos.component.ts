@@ -15,6 +15,9 @@ export class GastosComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit(): void {
+    if (this.presupuestoService.presupuesto === 0) {
+      this.router.navigate(['/ingresarPresupuesto'])
+    }
   }
 
 }
