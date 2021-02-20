@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ingresar-gasto.component.css']
 })
 export class IngresarGastoComponent implements OnInit {
+  nombreGasto: string = ''
+  cantidad: number = 0
+  formularioIncorrecto: boolean = false
+  textIncorrecto: string = 'Gasto o cantidad incorrecto'
+
 
   constructor() { }
 
