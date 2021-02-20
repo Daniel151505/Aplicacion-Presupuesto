@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IngresarPresupuestoComponent implements OnInit {
 
+  cantidad: number = 0
+  cantidadIncorrecta:boolean = false
+
   constructor() { }
 
   ngOnInit(): void {
