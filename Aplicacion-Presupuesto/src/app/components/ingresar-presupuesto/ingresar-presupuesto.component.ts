@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { PresupuestoService } from 'src/app/services/presupuesto.service';
 
 @Component({
   selector: 'app-ingresar-presupuesto',
@@ -10,9 +12,21 @@ export class IngresarPresupuestoComponent implements OnInit {
   cantidad: number = 0
   cantidadIncorrecta:boolean = false
 
-  constructor() { }
+  constructor(private presupuestoService: PresupuestoService,
+              private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  agregar(){
+    if (this.cantidad > 0) {
+      this.cantidadIncorrecta= false
+      this.presupuestoService.presupuesto = this.cantidad
+      this.presupuestoService.restante = this.cantidad
+      this.router.navigate(['/gastos'])
+    }else {
+      this.cantidadIncorrecta = true
+    }
   }
 
 }
