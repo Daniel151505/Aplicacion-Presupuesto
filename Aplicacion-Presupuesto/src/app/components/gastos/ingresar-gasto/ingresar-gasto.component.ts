@@ -17,4 +17,14 @@ export class IngresarGastoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  agregarGasto(){
+    if(this.nombreGasto === '' || this.cantidad <= 0){
+      this.formularioIncorrecto = true
+    }else {
+      this.formularioIncorrecto = false
+      this.nombreGasto = ''
+      this.cantidad = 0
+    }
+  }
+
 }
