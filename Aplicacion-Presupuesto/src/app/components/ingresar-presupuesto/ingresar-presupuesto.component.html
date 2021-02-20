@@ -3,7 +3,7 @@
         <h2 class="text-center fontTitle">Ingresa Presupuesto</h2>
         <div class="card">
             <div class="card-body">
-                <div class="text-center mb-3">
+                <div *ngIf="cantidadIncorrecta" class="text-center mb-3">
                     <span class="badge bg-danger textError">El presupuesto debe ser mayor a cero</span>
                 </div>
                 
