@@ -5,3 +5,11 @@
     color: white;
     text-transform: uppercase;
 }
+
+.body {
+    background-image: url(assets/images/fondo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
