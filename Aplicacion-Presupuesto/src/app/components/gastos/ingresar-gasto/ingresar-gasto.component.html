@@ -2,10 +2,12 @@
 <hr>
 <div class="form-group">
     <label for="gasto">Gasto</label>
-    <input type="text" placeholder="Por ejemplo Comida" id="gasto" class="form-control form-control-lg">
+    <input type="text" 
+            [(ngModel)]="nombreGasto" placeholder="Por ejemplo Comida" id="gasto" class="form-control form-control-lg">
 </div>
 <div class="form-group">
     <label for="gasto">Cantidad</label>
-    <input type="text" placeholder="Ingrese cantidad" id="cantidad" class="form-control form-control-lg">
+    <input type="number"
+           [(ngModel)]="cantidad"  placeholder="Ingrese cantidad" id="cantidad" class="form-control form-control-lg">
 </div>
-<button class="btn btn-secondary btn-lg btn-block mt-2"></button>
+<button class="btn btn-secondary btn-lg btn-block mt-2"  >Agregar Gasto</button>
