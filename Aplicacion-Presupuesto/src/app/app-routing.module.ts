@@ -7,10 +7,10 @@ const routes: Routes = [
   {path: '' , redirectTo: '/ingresarPresupuesto', pathMatch: 'full'},
   {path: 'ingresarPresupuesto' , component: IngresarPresupuestoComponent},
   {path: 'gastos', component: GastosComponent},
-  {path: '**', redirectTo: '/ingresarPresupueto', pathMatch: 'full'}
+  { path: '**', component: IngresarPresupuestoComponent },
 ];
 
-@NgModule({
+ @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
