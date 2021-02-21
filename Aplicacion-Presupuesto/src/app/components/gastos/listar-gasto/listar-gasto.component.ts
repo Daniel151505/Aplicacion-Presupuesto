@@ -12,10 +12,12 @@ export class ListarGastoComponent implements OnInit, OnDestroy {
   presupuesto: number
   restante:number
   subscription: Subscription
+  listarGastos: any[] = []
 
   constructor(private presupuestoService: PresupuestoService) { 
      this.subscription = this.presupuestoService.getGastos().subscribe(data => {
-
+        this.restante= this.restante - data.cantidad
+        this.listarGastos.push(data)
      })
   }
 
