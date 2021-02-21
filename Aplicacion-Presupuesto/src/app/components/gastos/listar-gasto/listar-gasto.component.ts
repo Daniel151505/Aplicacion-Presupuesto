@@ -36,7 +36,7 @@ export class ListarGastoComponent implements OnInit, OnDestroy {
     }else if(this.presupuesto / 2 > this.restante){
       return 'alert alert-warning'
     }else {
-      return 'alert alert secondary'
+      return 'alert alert-secondary'
     }
   }
 
