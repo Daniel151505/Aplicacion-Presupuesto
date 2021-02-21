@@ -28,7 +28,7 @@ export class IngresarGastoComponent implements OnInit {
 
     if(this.nombreGasto === '' || this.cantidad <= 0){
       this.formularioIncorrecto = true
-      this.textIncorrecto = 'Gasto o cantidad incorrect'
+      this.textIncorrecto = 'Gasto o cantidad incorrecto'
     }else {
       //Creamos un objeto 
       const Gasto = {
