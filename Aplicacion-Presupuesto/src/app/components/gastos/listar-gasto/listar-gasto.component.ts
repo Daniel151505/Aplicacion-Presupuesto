@@ -20,6 +20,8 @@ export class ListarGastoComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    this.presupuesto = this.presupuestoService.presupuesto
+    this.restante = this.presupuestoService.restante
   }
 
   ngOnDestroy(): void {
